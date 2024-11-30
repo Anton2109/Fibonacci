@@ -1,15 +1,17 @@
+/* Предположительная сложность алгоритма - O(n), т.к. время выполнения растет линейно*/
+
 let a = 0;
 let b = 1;
 
-function fib(a, b, f) {
+function fib(a, b, n) {
   let count = 0;
 
-  while (a < f) {
+  while (a < n) {
     [a, b] = [b, a + b];
     count++;
   }
 
-  return a === f ? count : false;
+  return a === n ? count : false;
 }
 
 const startTime = performance.now();
