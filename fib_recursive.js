@@ -1,9 +1,8 @@
 /* Предположительная сложность алгоритма - O(n), т.к. время выполнения растет линейно*/
 
-let a = 0;
-let b = 1;
-
-function fib(a, b, n) {
+function fib(n) {
+  let a = 0;
+  let b = 1;
   let count = 0;
 
   while (a < n) {
@@ -15,7 +14,7 @@ function fib(a, b, n) {
 }
 
 const startTime = performance.now();
-const result = fib(a, b, 21);
+const result = fib(21);
 const endTime = performance.now();
 
 const milSec = endTime - startTime;
@@ -45,5 +44,5 @@ console.log(`Время выполнения: ${milSec} мс`);
 
 /* Замеры для числа 21
 Последовательность: 8
-Время выполнения: 0.03389999999999915 мс
+Время выполнения: 0.04680000000000106 мс
 */
